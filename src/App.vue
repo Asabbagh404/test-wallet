@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import {computed} from 'Vue'
+import {computed} from 'vue'
 import { useRoute } from 'vue-router'
 import LayoutDefault from "./pages/layouts/LayoutDefault.vue";
 import LayoutEmpty from "./pages/layouts/LayoutEmpty.vue";

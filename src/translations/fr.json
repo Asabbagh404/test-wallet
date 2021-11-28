@@ -7,8 +7,6 @@
     "disconnect": "Déconnecter"
   },
   "TheLogin": {
-    "login":  "Nom de compte",
-    "password": "Mot de passe",
-    "submit": "Envoyer"
+    "connect": "Connection metamask"
   }
 }

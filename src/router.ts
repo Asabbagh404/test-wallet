@@ -1,13 +1,15 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 
+import TheError from '@/pages/TheError.vue'
 import TheIndex from '@/pages/TheIndex.vue'
 import TheLogin from '@/pages/TheLogin.vue'
-import TheError from '@/pages/TheError.vue'
+import {store} from "./store";
 
 const routes = [
   {
     path: '/',
     component: TheIndex,
+    beforeEnter: isInit,
   },
   {
     path: '/login',
@@ -27,6 +29,15 @@ declare module 'vue-router' {
   interface RouteMeta {
     noLayout?: boolean,
     isAdmin?: boolean,
+  }
+}
+
+function isInit(to: Function, from: Function, next: Function) { //TODO: find good types
+  console.log(store.getters.isReady)
+  if(!store.getters.isReady) {
+    next({ path: '/login'});
+  } else {
+    next()
   }
 }
 

@@ -1,38 +1,23 @@
 <template>
   <div class="container flex flex-col">
-    <label>{{ $t('TheLogin.login') }}</label>
-    <input type="text" name="login" v-model="login">
-    <label>{{ $t('TheLogin.password') }}</label>
-    <input type="password" v-model="password">
-    <button @click="loginMetaMask">{{ $t('TheLogin.submit')}}</button>
+    <button @click="connectWallet">{{ $t('TheLogin.connect') }}</button>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
-
-interface loginForm {
-  login: string
-  password: string
-}
+import {defineComponent} from 'vue'
+import {store, Action} from "../store";
 
 export default defineComponent({
-  data() {
-    return {
-      form: {
-        login: '',
-        password: ''
-      } as loginForm
-    }
+  onMounted() {
+    store.getters.getWallets > 0 && this.$router.push('/')
   },
   methods: {
-    loginMetaMask(): boolean {
-      if (typeof window.ethereum == 'undefined') {
-        this.$router.push({ name: 'error', params: {
-          message: 'You need to download <a href="https://metamask.io/download">metamask</a> '
-        }})
-      }
-      return true;
-    }
+     connectWallet(): void {
+      store.dispatch(Action.addWallets).then(() => {
+        this.$router.push('/')
+      })
+    },
+
   }
 })
 </script>
