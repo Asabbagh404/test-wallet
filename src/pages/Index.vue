@@ -1,6 +1,6 @@
 <template>
   <p class="flex  justify-center ">
-    Recommended IDE setup:
+    {{ $t("titles.main") }}
     <a href="https://code.visualstudio.com/" class="bg-green-800 text-white" target="_blank">VSCode</a>
     +
     <a href="https://github.com/johnsoncodehk/volar"  class="bg-green-800 text-white" target="_blank">Volar</a>
