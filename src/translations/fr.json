@@ -8,5 +8,8 @@
   },
   "TheLogin": {
     "connect": "Connection metamask"
+  },
+  "EthereumBalance": {
+    "title":  "Wallet list"
   }
 }

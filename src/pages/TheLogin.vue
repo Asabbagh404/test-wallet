@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import {defineComponent} from 'vue'
-import {store, Action} from "../store";
+import {store, Action} from '../store';
 
 export default defineComponent({
   onMounted() {

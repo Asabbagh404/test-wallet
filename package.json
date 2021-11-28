@@ -15,11 +15,19 @@
   "dependencies": {
     "@vueuse/head": "~0.6",
     "axios": "^0.24.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
     "ethers": "^5.5.1",
+    "events": "^3.3.0",
+    "process": "^0.11.10",
+    "rollup-plugin-polyfill-node": "^0.7.0",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.4",
     "vue": "~3.2",
     "vue-i18n": "^9.2.0-beta.22",
     "vue-router": "~4.0",
-    "vuex": "~4.0"
+    "vuex": "~4.0",
+    "web3": "^1.6.1"
   },
   "devDependencies": {
     "@cypress/vite-dev-server": "~2.2",

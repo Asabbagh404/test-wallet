@@ -10,14 +10,14 @@ import './assets/index.postcss'
 
 const head = createHead()
 const app = createApp(App)
-SyncWallet()
+SyncWallet();
 
 const i18n = createI18n({
     messages,
     locale: defaultLocale,
     fallbackLocale: defaultLocale
 });
-
+app.provide('cryptoDivider', 10e17);
 app.use(router)
     .use(store)
     .use(head)

@@ -1,10 +1,5 @@
 <template>
-  <p class="flex  justify-center ">
-    {{ $t("titles.main") }}
-    <a href="https://code.visualstudio.com/" class="bg-green-800 text-white" target="_blank">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar"  class="bg-green-800 text-white" target="_blank">Volar</a>
-  </p>
+  <h1 class="flex  justify-center ">{{ $t("titles.main") }}</h1>
 
   <EthereumBalance></EthereumBalance>
 

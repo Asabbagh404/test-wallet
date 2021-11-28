@@ -33,14 +33,15 @@ export const actions: ActionTree<State, State> & Actions = {
     console.log('app inited!')
   },
   async [Action.addWallets]({commit}) {
-    const eth = window.ethereum;
-    if (typeof eth == 'undefined') {
+    const ethereum = window.ethereum;
+    if (typeof ethereum == 'undefined') {
       goToError('You need to download <a href="https://metamask.io/download">metamask</a>')
     }
-    const accounts = await eth.request({method: 'eth_requestAccounts'});
+    const accounts = await ethereum.request({method: 'eth_requestAccounts'});
     if(accounts.length === 0) {
       goToError('no accounts found')
     }
+    console.log(accounts)
     commit(Mutation.ADD_WALLETS, accounts);
   },
   [Action.syncWallets]({commit}) {
