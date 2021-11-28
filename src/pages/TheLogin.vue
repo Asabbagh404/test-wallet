@@ -8,17 +8,27 @@
   </div>
 </template>
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+
+interface loginForm {
+  login: string
+  password: string
+}
+
+export default defineComponent({
   data() {
     return {
-      login: '',
-      password: ''
+      form: {
+        login: '',
+        password: ''
+      } as loginForm
     }
   },
   methods: {
-    loginMetaMask() {
+    loginMetaMask(): boolean {
       console.log('sended')
+      return true;
     }
   }
-}
+})
 </script>
