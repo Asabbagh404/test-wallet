@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import TheIndex from '@/pages/TheIndex.vue'
 import TheLogin from '@/pages/TheLogin.vue'
+import TheError from '@/pages/TheError.vue'
 
 const routes = [
   {
@@ -13,6 +14,13 @@ const routes = [
     component: TheLogin,
     meta: { noLayout: true }
   },
+  {
+    path: '/:pathMatch(.*)*',
+    component: TheError,
+    name: 'error',
+    meta: { noLayout: true },
+    props: true
+  }
 ]
 
 declare module 'vue-router' {

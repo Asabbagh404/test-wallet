@@ -26,7 +26,11 @@ export default defineComponent({
   },
   methods: {
     loginMetaMask(): boolean {
-      console.log('sended')
+      if (typeof window.ethereum == 'undefined') {
+        this.$router.push({ name: 'error', params: {
+          message: 'You need to download <a href="https://metamask.io/download">metamask</a> '
+        }})
+      }
       return true;
     }
   }
