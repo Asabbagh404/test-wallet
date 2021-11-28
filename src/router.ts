@@ -1,16 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Index from '@/pages/Index.vue'
+import TheIndex from '@/pages/TheIndex.vue'
+import TheLogin from '@/pages/TheLogin.vue'
 
 const routes = [
   {
     path: '/',
-    component: Index,
-    meta: {
-      title: 'Vite + Vue + TypeScript + Tailwind Starter Template',
-    },
+    component: TheIndex,
+  },
+  {
+    path: '/login',
+    component: TheLogin,
+    meta: { noLayout: true }
   },
 ]
+
+declare module 'vue-router' {
+  interface RouteMeta {
+    noLayout?: boolean,
+    isAdmin?: boolean,
+  }
+}
 
 const router = createRouter({
   history: createWebHistory(),
