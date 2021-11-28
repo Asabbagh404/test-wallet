@@ -1,5 +1,14 @@
 {
   "titles": {
     "main": "Bienvenue dans test-wallet"
+  },
+  "navigations": {
+    "home": "Accueil",
+    "disconnect": "Déconnecter"
+  },
+  "TheLogin": {
+    "login":  "Nom de compte",
+    "password": "Mot de passe",
+    "submit": "Envoyer"
   }
 }

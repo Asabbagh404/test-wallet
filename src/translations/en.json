@@ -1,5 +1,14 @@
 {
   "titles": {
     "main": "Welcome to test-wallet app"
+  },
+  "navigations": {
+    "home": "Home",
+    "disconnect": "Disconnect"
+  },
+  "TheLogin": {
+    "login":  "Login",
+    "password": "Password",
+    "submit": "Submit"
   }
 }
