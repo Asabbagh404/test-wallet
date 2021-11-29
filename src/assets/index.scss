@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2, h1{
+  @apply font-bold
+}
+
+p{
+  @apply mt-5 mb-5
+}
+
+hr{
+  @apply mt-5 mb-5
+}
+
+body{
+  @apply bg-gray-700 text-gray-400
+}
