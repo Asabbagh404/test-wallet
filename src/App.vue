@@ -10,10 +10,10 @@ import { useRoute } from 'vue-router'
 import LayoutDefault from './pages/layouts/LayoutDefault.vue';
 import LayoutEmpty from "./pages/layouts/LayoutEmpty.vue";
 
-const route =  useRoute(); //TODO: useRoute().meta only
+const meta =  useRoute().meta
 
 const layout = computed(<Component>() => {
-  return route.meta.noLayout ? LayoutEmpty : LayoutDefault
+  return meta.noLayout ? LayoutEmpty : LayoutDefault
 })
 
 </script>

@@ -6,7 +6,7 @@ import router from './router'
 import { store } from './store'
 import SyncWallet from '@/lib/initWallet'
 import { messages, defaultLocale } from "@/translations";
-import './assets/index.postcss'
+import './assets/index.scss'
 
 const head = createHead()
 const app = createApp(App)

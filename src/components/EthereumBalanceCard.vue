@@ -1,12 +1,12 @@
 <template>
-  <div class="rounded-md w-full bg-white px-4 py-4 shadow-md transition transform duration-500 cursor-pointer">
-    <div class="flex flex-col justify-start">
+  <div class="rounded-md w-full bg-gray-600 px-4 py-4 shadow-md transition transform duration-500 cursor-pointer">
+    <div class="flex flex-col justify-start text-indigo-300">
       <div class="flex justify-between items-center w-96">
         <div class="text-lg font-semibold text-bookmark-blue flex space-x-1 items-center mb-2">
           <span>{{ wallet.address }}</span>
         </div>
       </div>
-      <div class="text-xl text-gray-500 flex space-x-1 items-center">
+      <div class="text-xl flex space-x-1 items-center">
         <span class="flex">
           <v-spinner v-if="balanceLoading" />
           <template v-else>
