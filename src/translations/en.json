@@ -7,8 +7,9 @@
     "disconnect": "Disconnect"
   },
   "TheLogin": {
-    "login":  "Login",
-    "password": "Password",
-    "submit": "Submit"
+    "connect": "Connect to metamask"
+  },
+  "EthereumBalance": {
+    "title":  "Wallet list"
   }
 }

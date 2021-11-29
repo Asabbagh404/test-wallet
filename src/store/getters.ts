@@ -7,6 +7,9 @@ export type Getters = {
 
 export const getters: GetterTree<State, State> & Getters = {
   isReady(state) {
-    return !state.isInitialized
+    return state.isInitialized && state.wallets.length > 0
+  },
+  getWallets(state) {
+    return state.wallets
   },
 }

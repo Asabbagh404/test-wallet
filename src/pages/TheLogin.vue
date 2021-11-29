@@ -1,24 +1,23 @@
 <template>
   <div class="container flex flex-col">
-    <label>{{ $t('TheLogin.login') }}</label>
-    <input type="text" name="login" v-model="login">
-    <label>{{ $t('TheLogin.password') }}</label>
-    <input type="password" v-model="password">
-    <button @click="loginMetaMask">{{ $t('TheLogin.submit')}}</button>
+    <button @click="connectWallet">{{ $t('TheLogin.connect') }}</button>
   </div>
 </template>
 <script lang="ts">
-export default {
-  data() {
-    return {
-      login: '',
-      password: ''
-    }
+import {defineComponent} from 'vue'
+import {store, Action} from '../store';
+
+export default defineComponent({
+  onMounted() {
+    store.getters.getWallets > 0 && this.$router.push('/')
   },
   methods: {
-    loginMetaMask() {
-      console.log('sended')
-    }
+     connectWallet(): void {
+      store.dispatch(Action.addWallets).then(() => {
+        this.$router.push('/')
+      })
+    },
+
   }
-}
+})
 </script>

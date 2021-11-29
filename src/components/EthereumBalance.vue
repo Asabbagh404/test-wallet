@@ -1,22 +1,30 @@
 <template>
   <div>
-<hr>
-    <h2>Wallet test</h2>
-    <p>
-      Write a function that allow user to connect his metamask wallet on the ethereum network to our app when he click on connect button.<br>
-      If the user has already connected his wallet you should hide the connect button and display the list of his accounts with the account balance in ETH.<br>
-      You must get the account list only once on connection and save them on your state (store).<br>
-      Finally, the user should be able to see the amount of each account in USDT. You can use <a href="https://coinmarketcap.com/">coinmarketcap</a> API to get the conversion rate.<br>
-    </p>
-    <button class="bg-green-800 text-white p-2 rounded" @click="connect()"> connect </button>
+    <hr>
+    <h2>{{ $t('EthereumBalance') }}</h2>
+    <template v-for="wallet in walletsData">
+      <ethereum-balance-card
+          :wallet="wallet"
+      />
+    </template>
   </div>
 </template>
-<script setup lang="ts">
+<script lang="ts" setup>
+import {onMounted, reactive} from 'vue'
+import EthWallet from "../application/entity/EthWallet";
+import {store} from '../store';
+import {Wallets} from "../store/state";
+import {NetworkEnum} from "../application/entity/enum/network.enum";
+import EthereumBalanceCard from "./EthereumBalanceCard.vue";
 
-async function connect() {
- // have fun
-}
+const walletsAddress: Wallets = store.getters.getWallets;
+const walletsData = reactive([]);
 
+onMounted(async () : void => {
+    for (let walletAddress of walletsAddress) {
+      walletsData.push(new EthWallet(walletAddress, NetworkEnum.MAINNET));
+    }
+});
 </script>
 
 <style scoped>

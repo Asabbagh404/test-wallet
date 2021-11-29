@@ -1,9 +1,13 @@
+export type Wallets = Array<string>
+
 export interface State {
   debug: boolean
   version: string
   isInitialized: boolean
   count: number
+  wallets: Wallets
 }
+
 
 const versionString =
   import.meta.env.MODE === 'development'
@@ -15,4 +19,5 @@ export const state: State = {
   version: versionString,
   isInitialized: false,
   count: 0,
+  wallets: [],
 }
