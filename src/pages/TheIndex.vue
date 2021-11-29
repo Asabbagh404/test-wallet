@@ -1,14 +1,6 @@
 <template>
   <h1 class="flex  justify-center ">{{ $t("titles.main") }}</h1>
-
-  <EthereumBalance></EthereumBalance>
-
-  <div>
-    <hr>
-    <h2>Bonus</h2>
-    <p>
-      This app is in English only but can you manage both English and French?</p>
-  </div>
+  <ethereum-balance />
 </template>
 <script setup lang="ts">
 import EthereumBalance from "@/components/EthereumBalance.vue";
