@@ -46,7 +46,6 @@ onMounted(() => {
   })
 })
 const formattedBalance = computed(() => {
-  console.log(balance, cryptoDivider)
   return +balance.value / cryptoDivider;
 })
 const balanceLoading = computed(() => {

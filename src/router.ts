@@ -33,7 +33,6 @@ declare module 'vue-router' {
 }
 
 function isInit(to: Function, from: Function, next: Function) { //TODO: find good types
-  console.log(store.getters.isReady)
   if(!store.getters.isReady) {
     next({ path: '/login'});
   } else {
