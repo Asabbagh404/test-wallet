@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import pkg from './package.json';
 import nodePolyfills from 'rollup-plugin-polyfill-node'
@@ -16,7 +16,9 @@ export default defineConfig({
       include: ['buffer']
     }),
   ],
-
+  server: {
+    port: 8080
+  },
   define: {
     'process.env': process.env,
   },
@@ -25,7 +27,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  optimizeDeps: {
-    // exclude: ['web3']
-  }
 });

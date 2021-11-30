@@ -11,6 +11,7 @@ interface ImportMetaEnv extends Readonly<Record<string, string>> {
   // Only string type here to avoid hard to debug cast problems in your components!
   readonly VITE_APP_VERSION: string
   readonly VITE_APP_BUILD_EPOCH?: string
+  readonly VITE_API_URL?: string
 }
 interface ImportMeta {
   readonly env: ImportMetaEnv
