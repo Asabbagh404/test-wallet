@@ -1,8 +1,8 @@
 <template>
   <div>
     <hr>
-    <h2>{{ $t('EthereumBalance') }}</h2>
-    <template v-for="wallet in walletsData">
+    <h2>{{ $t('EthereumBalance.title') }}</h2>
+    <template v-for="wallet in walletsData" :key="wallet.address">
       <ethereum-balance-card
           :wallet="wallet"
       />
