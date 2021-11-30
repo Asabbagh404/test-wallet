@@ -1,7 +1,4 @@
 {
-  "titles": {
-    "main": "Bienvenue dans test-wallet"
-  },
   "navigations": {
     "home": "Accueil",
     "disconnect": "Déconnecter"

@@ -8,7 +8,6 @@ export interface State {
   wallets: Wallets
 }
 
-
 const versionString =
   import.meta.env.MODE === 'development'
     ? import.meta.env.VITE_APP_VERSION + '-dev'

@@ -28,6 +28,7 @@ export const mutations: MutationTree<State> & Mutations = {
     setLocaleStorageWallet(state.wallets);
   },
   [Mutation.EMPTY_WALLETS](state: State): void {
+    localStorage.clear();
     state.wallets = []
   },
 }
