@@ -8,5 +8,8 @@
   },
   "EthereumBalance": {
     "title":  "Wallet list"
+  },
+  "EthereumBalanceCard": {
+    "title":  "Balance"
   }
 }

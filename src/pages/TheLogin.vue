@@ -1,6 +1,6 @@
 <template>
   <div class="container flex flex-col m-auto">
-    <img src="../assets/images/metamask_icon.png" alt="logo" class="TheLogin__logo">
+    <img src="@/assets/images/metamask_icon.png" alt="logo" class="TheLogin__logo">
     <button @click="connectWallet" class="TheLogin__button">{{ $t('TheLogin.connect') }}</button>
   </div>
 </template>
