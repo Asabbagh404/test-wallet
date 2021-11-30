@@ -7,6 +7,9 @@
     "connect": "Connection metamask"
   },
   "EthereumBalance": {
-    "title":  "Wallet list"
+    "title":  "Liste de mes portefeuilles"
+  },
+  "EthereumBalanceCard": {
+    "title":  "Solde"
   }
 }

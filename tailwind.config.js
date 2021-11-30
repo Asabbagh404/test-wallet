@@ -7,14 +7,9 @@ module.exports = {
     enabled: process.env.NODE_ENV === 'production',
     content: ['./index.html', './src/**/*.{vue,ts}'],
   },
-  // theme: {
-  //   extend: {
-  //     // here's how to extend fonts if needed
-  //     fontFamily: {
-  //       sans: [...defaultTheme.fontFamily.sans],
-  //     },
-  //   },
-  // },
+  theme: {
+    'Montserrat': ['Montserrat', 'sans-serif'],
+  },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp'),
