@@ -17,7 +17,7 @@ import {NetworkEnum} from "../application/entity/enum/network.enum";
 import EthereumBalanceCard from "./EthereumBalanceCard.vue";
 
 const walletsAddress: Wallets = store.getters.getWallets;
-const walletsData = reactive([]);
+const walletsData:Array<EthWallet> = reactive([]);
 
 onMounted(async (): void => {
     for (let walletAddress of walletsAddress) {
