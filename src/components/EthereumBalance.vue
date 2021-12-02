@@ -19,7 +19,7 @@ import EthereumBalanceCard from "./EthereumBalanceCard.vue";
 const walletsAddress: Wallets = store.getters.getWallets;
 const walletsData:Array<EthWallet> = reactive([]);
 
-onMounted(async (): void => {
+onMounted(async (): Promise<void> => {
     for (let walletAddress of walletsAddress) {
       walletsData.push(new EthWallet(walletAddress, NetworkEnum.MAINNET));
     }
